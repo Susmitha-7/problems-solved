@@ -192,6 +192,7 @@ For n = 3, the program prints "Sruthi" 3 times per row and does this for 3 rows.
 For n = 5, the program prints "Sruthi" 5 times per row and does this for 5 rows.
 
 **4.Hollow Square**
+
 **Problem Statement**:
 
 Write a program that prints a square pattern of the letter "s" in a border shape. The size of the square grid is determined by an integer n, which is provided by the user. The border of the square will be filled with the letter "s", while the inside of the square will be filled with spaces. The program will print a hollow square pattern with a border made of "s".
@@ -208,8 +209,9 @@ Write a program that prints a square pattern of the letter "s" in a border shape
 8. After each row (after the inner loop finishes), print a newline character \n to move to the next row.
 9. End the program.
 
-   **c Program**
+ **C Program**
    ```c
+   
    #include<stdio.h>
 int main(){
     int n;
@@ -229,8 +231,9 @@ int main(){
     return 0;
 }
 ```
-**Sample Input and Output**:
 
+**Sample Input and Output**:
+```
 Sample Input 1:
 Enter the value of n: 5
 
@@ -240,7 +243,8 @@ s   s
 s   s
 s   s
 sssss
-
+```
+```
 Sample Input 2:
 Enter the value of n: 7
 
@@ -252,7 +256,7 @@ s     s
 s     s
 s     s
 sssssss
-
+```
 **Explanation**:
 
 For n = 5, the program prints a 5x5 square, with "s" along the edges and spaces in the center.
