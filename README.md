@@ -418,3 +418,70 @@ The number of spaces decreases as we move down the rows.
 
 
 
+**7.Hollow Square with diagnol and anti-diagonal**
+
+**Problem Statement**:
+
+Write a program to print a pattern of a hollow square, with diagonal crosses formed by *. The size of the square is determined by an integer n, provided by the user. The square should have a border of *, along with the diagonals (top-left to bottom-right and top-right to bottom-left) also filled with *. All other positions inside the square should be filled with spaces.
+
+**Algorithm**:
+
+1. Read the integer value n from the user, which specifies the size of the square grid.
+2. Use two nested for loops to print the pattern:
+3. The outer loop runs n times, representing the rows.
+4. The inner loop runs n times, representing the columns in each row.
+5. For each position (i, j) in the grid:
+       Print * if:
+       i == 1 (first row),
+       i == n (last row),
+       j == 1 (first column),
+       j == n (last column),
+       i == j (main diagonal),
+       i + j == n + 1 (anti-diagonal).
+6. Otherwise, print a space.
+7. After each row, print a newline character \n to move to the next row.
+8. End the program.
+   
+ **C Program**
+ ```c
+ #include<stdio.h>
+int main(){
+    int n;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==1||i==n||j==1||j==n||i==j||i+j==n+1)
+            {
+                printf(" * ");
+            }
+            else{
+                printf("   ");
+            }
+          }
+        printf("\n");
+    }
+    return 0;
+}
+```
+**Sample Input and Output**:
+```
+Sample Input 1:
+Enter the value of n: 5
+
+Sample Output 1:
+* * * * *
+* *   * *
+*   *   *
+* *   * *
+* * * * *
+```
+**Explanation**:
+
+For n = 6, the program prints a 6*6 grid. The pattern consists of:
+
+* on the borders (first and last rows, first and last columns),
+* along the main diagonal (i == j),
+* along the anti-diagonal (i + j == n + 1).
+
+Similarly, for n = 4 and n = 6, the program prints 4x4 and 6x6 grids, following the same pattern.
