@@ -303,7 +303,7 @@ int main(){
                 printf(" ");
             }
  }
- printf(" \n");
+ printf("\n");
     }
     return 0;
 }
@@ -318,7 +318,7 @@ Sample Output 1:
 1 2  
 1   3
 1     4
-12345
+1 2 3 4 5
 ```
 ```
 Sample Input 2:
@@ -328,7 +328,7 @@ Sample Output 2:
 1   
 1 2 
 1   3
-1234
+1 2 3 4
 ```
 ```
 Sample Input 3:
@@ -340,7 +340,7 @@ Sample Output 3:
 1   3 
 1     4
 1       5
-123456
+1 2 3 4 5 6
 ```
 **Explanation**:
 
