@@ -190,3 +190,73 @@ SruthiSruthiSruthiSruthiSruthi
 For n = 3, the program prints "Sruthi" 3 times per row and does this for 3 rows.
 
 For n = 5, the program prints "Sruthi" 5 times per row and does this for 5 rows.
+
+**4.Hollow Square**
+**Problem Statement**:
+
+Write a program that prints a square pattern of the letter "s" in a border shape. The size of the square grid is determined by an integer n, which is provided by the user. The border of the square will be filled with the letter "s", while the inside of the square will be filled with spaces. The program will print a hollow square pattern with a border made of "s".
+
+**Algorithm**:
+
+1. Read the integer value n from the user.
+2. Use two nested for loops to print the pattern:
+3. The outer loop runs n times (for rows).
+4. The inner loop runs n times (for columns in each row).
+5. For each position (i, j) in the grid:
+6. Print "s" if i == 1 (top row), i == n (bottom row), j == 1 (left column), or j == n (right column).
+7. Otherwise, print a space.
+8. After each row (after the inner loop finishes), print a newline character \n to move to the next row.
+9. End the program.
+
+   **c Program**
+   ```c
+   #include<stdio.h>
+int main(){
+    int n;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==1 || i==n||j==1||j==n){
+                printf("s");
+            }
+            else{
+                printf(" ");
+            }
+ }
+ printf("\n");
+    }
+    return 0;
+}
+```
+**Sample Input and Output**:
+
+Sample Input 1:
+Enter the value of n: 5
+
+Sample Output 1:
+sssss
+s   s
+s   s
+s   s
+sssss
+
+Sample Input 2:
+Enter the value of n: 7
+
+Sample Output 2:
+sssssss
+s     s
+s     s
+s     s
+s     s
+s     s
+sssssss
+
+**Explanation**:
+
+For n = 5, the program prints a 5x5 square, with "s" along the edges and spaces in the center.
+
+For n = 7, the program prints a 7x7 square, with "s" along the edges and spaces inside.
+
+In all cases, the program prints a hollow square pattern with "s" on the border.
