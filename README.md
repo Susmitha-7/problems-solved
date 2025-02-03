@@ -81,7 +81,9 @@ For n = 15, since 15 is odd, the term is calculated as 3^((15/2) - 1) = 3^(7) = 
 Write a C program that calculates the value of the nth term in a sequence based on the following conditions:
 
  If the value of n is odd, the nth term is calculated as 7 * (n / 2).
+ 
  If the value of n is even, the nth term is calculated as 6 * (n / 2 - 1).
+ 
  You need to prompt the user to input an integer n and then print the corresponding nth term of the sequence.
 
 **Algorithm**:
@@ -91,6 +93,7 @@ Write a C program that calculates the value of the nth term in a sequence based 
 4. If n is even (n % 2 == 0), calculate the nth term as 6 * (n / 2 - 1).
 5. Display the nth term calculated.
 6. End the program.
+
 **C Program**:
 ```c
 #include<stdio.h>
@@ -125,9 +128,7 @@ Enter the value of n: 6
 Output 2:
 The 6th term is: 12
 ```
-Explanation 2:
+**Explanation 2**:
 Since n = 6 is even, the nth term is calculated as 6 * (6 / 2 - 1) = 6 * (3 - 1) = 6 * 2 = 12.
 
-**Explanation**:
-Since n = 8 is even, the nth term is calculated as 6 * (8 / 2 - 1) = 6 * (4 - 1) = 6 * 3 = 18.
 
