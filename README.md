@@ -483,5 +483,3 @@ For n = 6, the program prints a 6*6 grid. The pattern consists of:
 * on the borders (first and last rows, first and last columns),
 * along the main diagonal (i == j),
 * along the anti-diagonal (i + j == n + 1).
-
-Similarly, for n = 4 and n = 6, the program prints 4x4 and 6x6 grids, following the same pattern.
