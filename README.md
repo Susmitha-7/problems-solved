@@ -358,3 +358,63 @@ For n = 6, it prints a 6x6 grid, showing the numbers at the diagonal, last row, 
 
 The key pattern is that the numbers along the bottom row, leftmost column, and diagonal of the grid are printed, while all other positions are filled with spaces.
 
+
+**6.Equilateral Triangle**
+
+**Problem Statement**:
+
+Write a program that prints a pyramid pattern of dollar signs ($). The height of the pyramid is determined by an integer n, which is provided by the user. The program should print a pyramid where the first row contains one dollar sign, the second row contains three dollar signs, the third row contains five dollar signs, and so on, with the number of dollar signs increasing by two for each subsequent row.
+
+**Algorithm**:
+
+1. Read the integer value n from the user, which specifies the height of the pyramid.
+2. Use a loop to print each row of the pyramid:
+3. The outer loop runs n times, one for each row.
+4. In each row:
+   Print spaces to align the dollar signs in the center. The number of spaces in the i-th row is (n - i).
+   Print dollar signs ($). The number of dollar signs in the i-th row is (2 * i - 1).
+5. After printing the dollar signs for each row, print a newline character \n to move to the next row.
+6. End the program.
+
+ **C Program**
+```c
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i;j++){
+            printf(" ");
+        }
+        for(int j=1;j<=(2*i-1);j++){
+            printf("$");
+        }
+        printf("\n");
+    }
+    return 0;
+    
+}
+```
+**Sample Input and Output**:
+```
+Sample Input:
+Enter the value of n: 5
+
+Sample Output:
+    $
+   $$$
+  $$$$$
+ $$$$$$$
+$$$$$$$$$
+```
+**Explanation**: 
+
+For n = 5, the pyramid has 5 rows, with each row having:
+
+1 dollar sign in the first row, 3 in the second, 5 in the third, 7 in the fourth, and 9 in the fifth.
+
+The number of spaces decreases as we move down the rows.
+
+
+
