@@ -76,20 +76,21 @@ For n = 15, since 15 is odd, the term is calculated as 3^((15/2) - 1) = 3^(7) = 
 
 
 
-**Problem Statement**:
+**Geometric Series-2**:
+
 Write a C program that calculates the value of the nth term in a sequence based on the following conditions:
 
-If the value of n is odd, the nth term is calculated as 7 * (n / 2).
-If the value of n is even, the nth term is calculated as 6 * (n / 2 - 1).
-You need to prompt the user to input an integer n and then print the corresponding nth term of the sequence.
+ If the value of n is odd, the nth term is calculated as 7 * (n / 2).
+ If the value of n is even, the nth term is calculated as 6 * (n / 2 - 1).
+ You need to prompt the user to input an integer n and then print the corresponding nth term of the sequence.
 
 **Algorithm**:
-Start the program and take an integer input n from the user.
-Check if n is odd or even:
-If n is odd (n % 2 == 1), calculate the nth term as 7 * (n / 2).
-If n is even (n % 2 == 0), calculate the nth term as 6 * (n / 2 - 1).
-Display the nth term calculated.
-End the program.
+1. Start the program and take an integer input n from the user.
+2. Check if n is odd or even:
+3. If n is odd (n % 2 == 1), calculate the nth term as 7 * (n / 2).
+4. If n is even (n % 2 == 0), calculate the nth term as 6 * (n / 2 - 1).
+5. Display the nth term calculated.
+6. End the program.
 **C Program**:
 ```c
 #include<stdio.h>
@@ -111,7 +112,7 @@ int main(){
 ```
 **Sample Input and Output**:
 ```
-**Input 1**:
+Input 1:
 Enter the value of n: 5
 **Output 1**:
 The 5th term is: 14
@@ -119,9 +120,9 @@ The 5th term is: 14
 Explanation 1:
 Since n = 5 is odd, the nth term is calculated as 7 * (5 / 2) = 7 * 2 = 14.
 ```
-**Input 2**:
+Input 2:
 Enter the value of n: 6
-**Output 2**:
+Output 2:
 The 6th term is: 12
 ```
 Explanation 2:
