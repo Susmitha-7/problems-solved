@@ -1,5 +1,5 @@
 # problems-solved
-1.**Geometric Series**
+**1.Geometric Series**
 
 **Problem Statement**:
 Given an integer n, find and print the n-th term of a geometric series. The series has a specific pattern:
@@ -76,7 +76,7 @@ For n = 15, since 15 is odd, the term is calculated as 3^((15/2) - 1) = 3^(7) = 
 
 
 
-2.**Geometric Series-2** 
+**2.Geometric Series-2** 
 **Problem Statement**: Write a C program that calculates the value of the nth term in a sequence based on the following conditions:
 
  If the value of n is odd, the nth term is calculated as 7 * (n / 2).
