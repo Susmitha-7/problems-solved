@@ -133,4 +133,57 @@ The 6th term is: 12
 **Explanation 2**:
 Since n = 6 is even, the nth term is calculated as 6 * (6 / 2 - 1) = 6 * (3 - 1) = 6 * 2 = 12.
 
+**3.Nested loop**
 
+**Problem Statement**:Write a program that prints the word "Sruthi" in a square grid pattern. The size of the grid is determined by an integer n, which is provided by the user. The grid will have n rows and n columns, and each cell will contain the word "Sruthi".
+
+**Algorithm**:
+
+1.Read the integer value n from the user.
+2.Use two nested for loops to print the word "Sruthi":
+3.The outer loop runs n times (for rows).
+4.The inner loop runs n times (for columns in each row).
+5.In each iteration of the inner loop, print the word "Sruthi".
+6.After each row (after the inner loop finishes), print a newline character \n to move to the next row.
+7.End the program.
+**C Program**:
+```c
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            printf("Sruthi");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+**Sample Input and Output**:
+```
+Sample Input 1:
+Enter the value of n: 3
+
+Sample Output 1:
+SruthiSruthiSruthi
+SruthiSruthiSruthi
+SruthiSruthiSruthi
+```
+```
+Sample Input 2:
+Enter the value of n: 5
+
+Sample Output 2:
+SruthiSruthiSruthiSruthiSruthi
+SruthiSruthiSruthiSruthiSruthi
+SruthiSruthiSruthiSruthiSruthi
+SruthiSruthiSruthiSruthiSruthi
+SruthiSruthiSruthiSruthiSruthi
+```
+**Explanation**:
+For n = 3, the program prints "Sruthi" 3 times per row and does this for 3 rows.
+For n = 5, the program prints "Sruthi" 5 times per row and does this for 5 rows.
