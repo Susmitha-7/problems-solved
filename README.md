@@ -264,3 +264,97 @@ For n = 5, the program prints a 5x5 square, with "s" along the edges and spaces 
 For n = 7, the program prints a 7x7 square, with "s" along the edges and spaces inside.
 
 In all cases, the program prints a hollow square pattern with "s" on the border.
+
+
+**5.Hollow Triangle**
+
+**Problem Statement**:
+
+Write a program that prints a pattern of numbers in the shape of a right-angle triangle inside a square grid. The size of the grid is determined by an integer n, which is provided by the user. The program prints the numbers along the diagonal, along the bottom row, and along the leftmost column. All other positions inside the grid will be filled with spaces.
+
+**Algorithm**:
+
+1. Read the integer value n from the user.
+2. Use two nested for loops to print the pattern:
+3. The outer loop runs n times (for rows).
+4. The inner loop runs n times (for columns in each row).
+5. For each position (i, j) in the grid:
+6. Print the number j if:
+   i == n (bottom row),
+   j == 1 (leftmost column),
+   i == j (diagonal).
+7. Otherwise, print a space.
+8. After each row (after the inner loop finishes), print a newline character \n to move to the next row.
+9. End the program.
+    
+  **C Program**
+  ```c
+  #include<stdio.h>
+int main(){
+    int n;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(i==n||j==1||i==j){
+                printf("%d",j);
+            }
+            else{
+                printf(" ");
+            }
+ }
+ printf("\n");
+    }
+    return 0;
+}
+```
+**Sample Input and Output**:
+```
+Sample Input 1:
+Enter the value of n: 5
+
+Sample Output 1:
+1    
+1 2  
+1   3
+1     4
+12345
+```
+```
+Sample Input 2:
+Enter the value of n: 4
+
+Sample Output 2:
+1   
+1 2 
+1   3
+1234
+```
+```
+Sample Input 3:
+Enter the value of n: 6
+
+Sample Output 3:
+1     
+1 2   
+1   3 
+1     4
+1       5
+123456
+```
+**Explanation**:
+
+For n = 5, the program prints a 5x5 grid where:
+
+The numbers along the diagonal (i == j).
+
+The numbers in the last row (i == n).
+
+The numbers in the first column (j == 1).
+
+For n = 4, it prints a 4x4 grid with similar logic.
+
+For n = 6, it prints a 6x6 grid, showing the numbers at the diagonal, last row, and first column.
+
+The key pattern is that the numbers along the bottom row, leftmost column, and diagonal of the grid are printed, while all other positions are filled with spaces.
+
