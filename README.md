@@ -489,10 +489,12 @@ For n = 6, the program prints a 6*6 grid. The pattern consists of:
  **Problem Statement**:
  
  Write a C program that takes an integer n as input and prints Pascal's Triangle of n rows. Pascal's Triangle is a triangular array of binomial coefficients, where:
-
  The first and last value in each row is always 1.
+ 
  Each intermediate value in a row is the sum of the two values directly above it in the previous row.
+ 
  The formula to compute an element at row i and column j is:
+ 
  C(i,j)=C(i−1,j−1)× j(i−j+1)
 ​
 
