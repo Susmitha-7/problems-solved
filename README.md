@@ -495,6 +495,7 @@ For n = 6, the program prints a 6*6 grid. The pattern consists of:
  The formula to compute an element at row i and column j is:
  C(i,j)=C(i−1,j−1)× j(i−j+1)
 ​
+
  **Algorithm**:
 1. Accept an integer n from the user, which represents the number of rows in Pascal's Triangle.
 2. Loop through each row i from 0 to n-1.
@@ -536,7 +537,7 @@ int main()
 Sample Input:
 Enter the value of n: 5
 
-**Sample Output**:
+Sample Output:
         1
       1   1
     1   2   1
