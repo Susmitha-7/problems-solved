@@ -483,3 +483,76 @@ For n = 6, the program prints a 6*6 grid. The pattern consists of:
 * on the borders (first and last rows, first and last columns),
 * along the main diagonal (i == j),
 * along the anti-diagonal (i + j == n + 1).
+
+**8.Pascal's Triangle**
+
+ **Problem Statement**:
+ 
+ Write a C program that takes an integer n as input and prints Pascal's Triangle of n rows. Pascal's Triangle is a triangular array of binomial coefficients, where:
+
+ The first and last value in each row is always 1.
+ Each intermediate value in a row is the sum of the two values directly above it in the previous row.
+ The formula to compute an element at row i and column j is:
+ C(i,j)=C(i−1,j−1)× j(i−j+1)
+​
+ **Algorithm**:
+1. Accept an integer n from the user, which represents the number of rows in Pascal's Triangle.
+2. Loop through each row i from 0 to n-1.
+3. Print leading spaces to align the triangle properly.
+4. Loop through each column j from 0 to i:
+5. If j == 0 or i == 0, set c = 1 (since the first element of each row is always 1).
+6. Otherwise, compute the binomial coefficient using the formula:
+    C(i,j)=C(i−1,j−1)× j(i−j+1)
+​
+   
+ **C Program**
+ ```c
+#include<stdio.h>
+int main()
+{
+    int row,s,i,c,j;
+    printf("Enter the value of n:");
+    scanf("%d",&row);
+    for(i=0;i<row;i++){
+        for(s=1;s<=row-i;s++){
+            printf("  ");
+        }
+        for(j=0;j<=i;j++){
+            if(j==0 || i==0){
+                c=1;
+            }
+            else{
+                c=c*(i-j+1 ) / j;
+            }
+            printf("%4d",c);
+        }
+        printf("\n");
+    }
+    return 0;
+    }
+```
+**Sample Input and Output**:
+```
+Sample Input:
+Enter the value of n: 5
+
+**Sample Output**:
+        1
+      1   1
+    1   2   1
+  1   3   3   1
+1   4   6   4   1
+```
+**Explanation**:
+
+The first row contains only 1.
+
+The second row contains 1 1.
+
+The third row follows Pascal's Triangle rule: 1 (1+1) 1 → 1 2 1.
+
+The fourth row: 1 (1+2) (2+1) 1 → 1 3 3 1.
+
+The fifth row: 1 (1+3) (3+3) (3+1) 1 → 1 4 6 4 1.
+
+This pattern continues as n increases.
