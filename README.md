@@ -607,6 +607,7 @@ Test Case 1:
 
 Input:
 Enter the value of n: 2749
+
 Output:
 Largest digit is : 9
 ```
