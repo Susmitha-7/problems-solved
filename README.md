@@ -559,3 +559,58 @@ The fourth row: 1 (1+2) (2+1) 1 → 1 3 3 1.
 The fifth row: 1 (1+3) (3+3) (3+1) 1 → 1 4 6 4 1.
 
 This pattern continues as n increases.
+
+
+**9.Largest Digit**:
+
+**Problem Statement**:
+
+Write a C program to find the largest digit in a given positive integer.
+
+The program should take an integer input from the user, extract each digit, and determine the maximum digit present in the number.
+
+**Algorithm**:
+
+1. Start the program.
+2. Declare integer variables n (input number), d (to store individual digits), and large (to store the largest digit, initialized to 0).
+3. Prompt the user to enter a positive integer n.
+4. Read the input value using scanf().
+5. Use a while loop to extract each digit of n:
+   Compute d = n % 10 to get the last digit.
+6. If d is greater than large, update large = d.
+7. Remove the last digit by performing n = n / 10.
+8. Once all digits are processed, print the largest digit.
+9. End the program.
+
+**C Program**:
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int n,d,large=0;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    while(n!=0){
+        int d=n%10;
+        if(d>large){
+            large=d;
+        }
+        n /=10;
+    }
+    printf("Largest digit is :%d\n",large);
+    return 0;
+}
+```
+**Sample Input and Output**:
+```
+Test Case 1:
+
+Input:
+Enter the value of n: 2749
+Output:
+Largest digit is : 9
+```
+Processing:
+
+Extracted digits: 9, 4, 7, 2
+Largest digit: 9
