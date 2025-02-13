@@ -561,11 +561,12 @@ The fifth row: 1 (1+3) (3+3) (3+1) 1 → 1 4 6 4 1.
 This pattern continues as n increases.
 
 
-**9.Largest Digit**:
+**9.Largest Digit**
 
 **Problem Statement**:
 
 Write a C program to find the largest digit in a given positive integer.
+
 The program should take an integer input from the user, extract each digit, and determine the maximum digit present in the number.
 
 **Algorithm**:
@@ -601,7 +602,7 @@ int main(){
 }
 ```
 **Sample Input and Output**:
-Test Case 1:
+
 ```
 Input:
 Enter the value of n: 2749
@@ -609,7 +610,8 @@ Enter the value of n: 2749
 Output:
 Largest digit is : 9
 ```
-Processing:
+**Processing**:
 
 Extracted digits: 9, 4, 7, 2
+
 Largest digit: 9
